@@ -1,0 +1,46 @@
+Task 1
+
+    Pentru a calcula numarul de instructiuni shiftam primii 3 biti catre sfarsit deoarece ei formeaza numarul de instructiuni
+Pentru a cauta intructiunile ( operatiile ), am folosit lucru cu masti;
+O functie care returneaza valoarea 1 sau 0 daca bitul de pe o pozitie anume dintr un numar dat este 1 sau 0; 
+Odata ce am shiftat la stanga primii 3 biti am scapat de numarul de instructiuni, fiind ramasi doar bitii
+care reprezinta instructiunile si respectiv dimensiunea;
+Am folosit un for care ia 2 valori, prima pentru primul bit dintr o instriuctiune si a doua pentru a doilea bit
+din aceeasi instruciune.
+Pentru a calcula dimensiunea am shiftat spre stanga numarul instruciunilor * 2 deroarece fiecare instructiune este
+formata din cate 2 biti, primii 4 biti fiind deja la inceput i am shiftat spre sfarsit pentru a creea numarul
+care reprezinta dimesniunea.
+
+Task 2
+    Pentru a afla cate numere unsigned short trebuie scanate folosim formula data, daca Numaruk instr + 1 inmultit
+cu dimensiunea modulo 16 nu este 0, atunci se mai aduna 1;
+Scanam numere cat am ne a dat valoarea lui "formnr", si le introducem in vectorul arr;
+Dupa vedem cate numere am scanat si pentru fiecare dintre ele in dependenta de dimensiunea operandului
+il shiftam catre stanga daca este cazul si dupa spre dreapta si il salvam in vectorul operanzi crescand contorul
+Intram in bucla while
+Cat timp contorii sunt egali cu 0 rezultatul va fi egal cu primul numar (primul operand) al doilea numar;
+Apoi rezultatul va fi egal cu rezultatul anterior (al doilea operand) al treilea numar;
+Se va repeta pentru toate operatiile
+
+AFISAM REZULTATUL
+
+Task 3
+    Pentru a afla operanzii cu dimensiuni ciudate verificam cat timp dimensiunea operandului incape intr un
+unsigned short si citim operanzii, bitii ramasi se trec la inceput si dupa din urmatorul numar luam bitii
+de care avem nevoie, ii deplasam la stanga atat timp cat se vor suprapune corect cu primul numar prin (sau logic)
+
+Task 4
+    Primul for
+Daca operandul este '-' sau '+'
+Atunci numarul se va afisa in prima pozitie din al doilea vector de numere
+Marim poztia in vector cu 1
+Daca operandul este '*' sau '/'
+Atunci rezultatul acestei operatii se va afisa in al doilea vector de numere
+
+Odata ce am scapat de operatiile '*' si '/' formam un nou vector in care afisam doar operatiile '+' si '-' in ordinea in care sunt in primul vector de operatii
+
+In continuare facem ca si la TASK2 doar ca fara '*' si '/' deoarece aceste operatii au fost facute in primul for
+
+Daca operatiile nu vor contine '+' si '-' atunci rezultatul va fi primul element din al doilea vector de numere
+
+AFISAM REZULTATUL
